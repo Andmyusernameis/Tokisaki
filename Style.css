@@ -1,0 +1,59 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu {
+  display: none;
+  list-style-type: none;
+}
+
+.menu li {
+  text-align: center;
+  padding: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 0 20px;
+  }
+}
